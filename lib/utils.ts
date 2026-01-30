@@ -17,4 +17,5 @@ export const CONTACT = {
   instagramHandle: '@listedbyrmit',
   serviceAreas: ['Nassau County', 'Suffolk County', 'NYC (All 5 Boroughs)'],
   services: ['Buy', 'Sell', 'Invest', 'Rent'],
+  smsText: "Hi Rmit! I found you online and I'm interested in learning more about buying/selling real estate. Can we chat?",
 }
