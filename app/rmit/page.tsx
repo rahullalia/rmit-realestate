@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Phone, MessageSquare, Mail, Download, Instagram, ArrowLeft } from 'lucide-react'
+import { Phone, MessageSquare, Mail, Download, Instagram, Globe } from 'lucide-react'
 import { CONTACT } from '@/lib/utils'
 import { FadeIn, Float, HoverScale } from '@/components/animations'
 
@@ -14,17 +14,6 @@ export default function ContactCard() {
       {/* Background */}
       <div className="bg-gradient" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full bg-[#0c2340]/20 blur-3xl" />
-
-      {/* Back link */}
-      <FadeIn>
-        <Link
-          href="/"
-          className="absolute top-6 left-6 flex items-center gap-2 text-[var(--text-muted)] hover:text-white transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span className="text-sm">Back to site</span>
-        </Link>
-      </FadeIn>
 
       {/* Card */}
       <div className="relative z-10 w-full max-w-sm">
@@ -106,7 +95,19 @@ export default function ContactCard() {
           </div>
         </FadeIn>
 
+        {/* Website link */}
         <FadeIn delay={0.3}>
+          <div className="mt-6">
+            <HoverScale>
+              <Link href="/" className="btn-secondary w-full justify-center">
+                <Globe className="w-5 h-5" />
+                Visit Website
+              </Link>
+            </HoverScale>
+          </div>
+        </FadeIn>
+
+        <FadeIn delay={0.35}>
           <p className="text-center text-sm text-[var(--text-muted)] mt-8">
             {CONTACT.company}
           </p>
