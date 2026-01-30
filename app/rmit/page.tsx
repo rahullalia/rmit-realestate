@@ -22,20 +22,18 @@ export default function ContactCard() {
           <div className="text-center mb-10">
             <Float>
               <div className="relative inline-block">
-                <div className="card p-2 mx-auto mb-6">
-                  <div
-                    className="rounded-lg overflow-hidden"
-                    style={{ width: '100px', height: '130px' }}
-                  >
-                    <Image
-                      src="/rmit.jpg"
-                      alt={CONTACT.name}
-                      fill
-                      priority
-                      className="object-cover"
-                      sizes="100px"
-                    />
-                  </div>
+                <div
+                  className="rounded-2xl overflow-hidden border border-[var(--border-subtle)] mx-auto mb-6"
+                  style={{ width: '120px', height: '150px' }}
+                >
+                  <Image
+                    src="/rmit.jpg"
+                    alt={CONTACT.name}
+                    fill
+                    priority
+                    className="object-cover"
+                    sizes="120px"
+                  />
                 </div>
                 <div className="absolute inset-0 rounded-2xl bg-[#b8860b]/10 blur-xl -z-10" />
               </div>
