@@ -80,32 +80,26 @@ export default function ContactCard() {
           </FadeIn>
         </div>
 
-        {/* Social */}
-        <FadeIn delay={0.25}>
-          <div className="mt-10 flex justify-center">
-            <a
-              href={CONTACT.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[var(--text-muted)] hover:text-[#b8860b] transition-colors"
-            >
-              <Instagram className="w-5 h-5" />
-              <span>{CONTACT.instagramHandle}</span>
-            </a>
-          </div>
-        </FadeIn>
+        {/* More actions */}
+        <div className="mt-6 space-y-3">
+          <FadeIn delay={0.25}>
+            <HoverScale href={CONTACT.instagram} target="_blank">
+              <span className="btn-secondary w-full justify-center">
+                <Instagram className="w-5 h-5" />
+                Follow on Instagram
+              </span>
+            </HoverScale>
+          </FadeIn>
 
-        {/* Website link */}
-        <FadeIn delay={0.3}>
-          <div className="mt-6">
+          <FadeIn delay={0.3}>
             <HoverScale>
               <Link href="/" className="btn-secondary w-full justify-center">
                 <Globe className="w-5 h-5" />
                 Visit Website
               </Link>
             </HoverScale>
-          </div>
-        </FadeIn>
+          </FadeIn>
+        </div>
 
         <FadeIn delay={0.35}>
           <p className="text-center text-sm text-[var(--text-muted)] mt-8">

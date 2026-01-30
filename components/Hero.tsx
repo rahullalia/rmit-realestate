@@ -19,14 +19,14 @@ export function Hero() {
             <FadeIn delay={0.1}>
               <Float>
                 <div className="relative">
-                  <div className="w-64 h-72 sm:w-72 sm:h-80 lg:w-80 lg:h-96 rounded-3xl overflow-hidden border-2 border-[#b8860b]/30 shadow-2xl shadow-[#0c2340]/20">
+                  <div className="w-56 sm:w-64 lg:w-72 aspect-[3/4] rounded-3xl overflow-hidden border-2 border-[#b8860b]/30 shadow-2xl shadow-[#0c2340]/20">
                     <Image
                       src="/rmit.jpg"
                       alt={`${CONTACT.name}, Real Estate Professional`}
                       fill
                       priority
                       className="object-cover"
-                      sizes="(max-width: 768px) 256px, 320px"
+                      sizes="(max-width: 768px) 224px, 288px"
                     />
                   </div>
                   {/* Subtle glow */}

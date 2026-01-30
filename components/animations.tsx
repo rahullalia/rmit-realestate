@@ -132,16 +132,19 @@ export function HoverScale({
   children,
   className = '',
   href,
+  target,
 }: {
   children: React.ReactNode
   className?: string
   href?: string
+  target?: string
 }) {
   const isMobile = useIsMobile()
+  const linkProps = target === '_blank' ? { target, rel: 'noopener noreferrer' } : {}
 
   if (isMobile) {
     return href ? (
-      <a href={href} className={className}>{children}</a>
+      <a href={href} className={className} {...linkProps}>{children}</a>
     ) : (
       <div className={className}>{children}</div>
     )
@@ -158,7 +161,7 @@ export function HoverScale({
     </motion.div>
   )
 
-  return href ? <a href={href}>{content}</a> : content
+  return href ? <a href={href} {...linkProps}>{content}</a> : content
 }
 
 // Gentle floating for profile image
