@@ -22,7 +22,7 @@ export default function ContactCard() {
           <div className="text-center mb-10">
             <Float>
               <div className="relative inline-block">
-                <div className="w-28 aspect-[4/5] rounded-2xl overflow-hidden border border-[var(--border-visible)] mx-auto mb-6">
+                <div className="w-28 h-36 rounded-2xl overflow-hidden border border-[var(--border-visible)] mx-auto mb-6">
                   <Image
                     src="/rmit.jpg"
                     alt={CONTACT.name}
