@@ -22,17 +22,17 @@ export default function ContactCard() {
           <div className="text-center mb-10">
             <Float>
               <div className="relative inline-block">
-                <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-[#b8860b]/30 mx-auto mb-6">
+                <div className="w-28 aspect-[4/5] rounded-2xl overflow-hidden border border-[var(--border-visible)] mx-auto mb-6">
                   <Image
                     src="/rmit.jpg"
                     alt={CONTACT.name}
                     fill
                     priority
                     className="object-cover"
-                    sizes="128px"
+                    sizes="112px"
                   />
                 </div>
-                <div className="absolute inset-0 rounded-full bg-[#b8860b]/10 blur-xl -z-10" />
+                <div className="absolute inset-0 rounded-2xl bg-[#b8860b]/10 blur-xl -z-10" />
               </div>
             </Float>
             <h1 className="heading-md text-white mb-2">{CONTACT.name}</h1>
