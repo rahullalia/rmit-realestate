@@ -19,7 +19,10 @@ export function Hero() {
             <FadeIn delay={0.1}>
               <Float>
                 <div className="relative">
-                  <div className="w-60 h-80 sm:w-72 sm:h-96 lg:w-80 lg:h-[420px] rounded-2xl overflow-hidden border border-[var(--border-visible)] shadow-2xl shadow-[#0c2340]/20">
+                  <div
+                      className="rounded-2xl overflow-hidden border border-[var(--border-visible)] shadow-2xl shadow-[#0c2340]/20"
+                      style={{ width: '280px', height: '380px' }}
+                    >
                     <Image
                       src="/rmit.jpg"
                       alt={`${CONTACT.name}, Real Estate Professional`}
