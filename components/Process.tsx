@@ -30,8 +30,8 @@ export function Process() {
 
         {/* Timeline */}
         <div className="relative">
-          {/* Connecting line (desktop only) */}
-          <div className="hidden lg:block absolute top-[60px] left-[10%] right-[10%] h-0.5 bg-[var(--border-subtle)]">
+          {/* Connecting line (desktop only) - centered through 72px circles */}
+          <div className="hidden lg:block absolute top-[36px] left-[10%] right-[10%] h-0.5 bg-[var(--border-subtle)]">
             <motion.div
               className="h-full bg-[var(--gold)]"
               initial={{ width: 0 }}

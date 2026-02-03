@@ -29,6 +29,7 @@ export function Hero() {
                       fill
                       priority
                       className="object-cover"
+                      style={{ borderRadius: '1rem' }}
                       sizes="280px"
                     />
                   </div>
