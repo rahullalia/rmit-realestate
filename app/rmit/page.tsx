@@ -23,8 +23,8 @@ export default function ContactCard() {
             <Float>
               <div className="relative inline-block">
                 <div
-                  className="rounded-2xl overflow-hidden border border-[var(--border-subtle)] mx-auto mb-6"
-                  style={{ width: '120px', height: '150px' }}
+                  className="overflow-hidden border border-[var(--border-subtle)] mx-auto mb-6"
+                  style={{ width: '120px', height: '150px', borderRadius: '1rem' }}
                 >
                   <Image
                     src="/rmit.jpg"
@@ -35,7 +35,7 @@ export default function ContactCard() {
                     sizes="120px"
                   />
                 </div>
-                <div className="absolute inset-0 rounded-2xl bg-[#b8860b]/10 blur-xl -z-10" />
+                <div className="absolute inset-0 bg-[#b8860b]/10 blur-xl -z-10" style={{ borderRadius: '1rem' }} />
               </div>
             </Float>
             <h1 className="heading-md text-white mb-2">{CONTACT.name}</h1>
