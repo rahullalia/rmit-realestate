@@ -3,12 +3,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Phone, Mail, ArrowRight } from 'lucide-react'
-import { CONTACT } from '@/lib/utils'
+import { CONTACT, STATS } from '@/lib/utils'
 import { FadeIn, ParallaxBg, Float, HoverScale } from './animations'
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20">
       <ParallaxBg />
       <div className="bg-gradient" />
 
@@ -20,8 +20,8 @@ export function Hero() {
               <Float>
                 <div className="relative">
                   <div
-                    className="rounded-2xl overflow-hidden border border-[var(--border-subtle)] shadow-2xl"
-                    style={{ width: '280px', height: '350px' }}
+                    className="overflow-hidden border border-[var(--border-subtle)] shadow-2xl"
+                    style={{ width: '280px', height: '350px', borderRadius: '1rem' }}
                   >
                     <Image
                       src="/rmit.jpg"
@@ -33,7 +33,7 @@ export function Hero() {
                     />
                   </div>
                   {/* Subtle glow */}
-                  <div className="absolute inset-0 rounded-2xl bg-[#b8860b]/10 blur-2xl -z-10" />
+                  <div className="absolute inset-0 bg-[#b8860b]/10 blur-2xl -z-10" style={{ borderRadius: '1rem' }} />
                 </div>
               </Float>
             </FadeIn>
@@ -58,11 +58,27 @@ export function Hero() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <p className="body-lg max-w-lg mx-auto lg:mx-0 mb-10">
+              <p className="body-lg max-w-lg mx-auto lg:mx-0 mb-8">
                 I help people find their perfect home across Long Island and New York City.
-                Whether you're buying, selling, or investing, I'm here to make the process
+                Whether you&apos;re buying, selling, or investing, I&apos;m here to make the process
                 simple and stress-free.
               </p>
+            </FadeIn>
+
+            {/* Stats Row */}
+            <FadeIn delay={0.22}>
+              <div className="flex gap-6 lg:gap-8 justify-center lg:justify-start mb-10">
+                {STATS.map((stat) => (
+                  <div key={stat.label} className="text-center">
+                    <div className="text-2xl lg:text-3xl font-bold text-[var(--gold)]">
+                      {stat.value}
+                    </div>
+                    <div className="text-xs text-[var(--text-muted)] uppercase tracking-wide mt-1">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </FadeIn>
 
             <FadeIn delay={0.25}>

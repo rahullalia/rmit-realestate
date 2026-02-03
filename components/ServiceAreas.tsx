@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 
 export function ServiceAreas() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section id="areas" className="relative py-24 lg:py-32">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <FadeIn>
           <p className="label mb-4">Where I Work</p>

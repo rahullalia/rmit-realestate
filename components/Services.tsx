@@ -33,7 +33,7 @@ const services = [
 
 export function Services() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section id="services" className="relative py-24 lg:py-32">
       <div className="max-w-6xl mx-auto px-6">
         <FadeIn>
           <p className="label text-center mb-4">What I Do</p>

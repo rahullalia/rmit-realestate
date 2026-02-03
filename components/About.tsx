@@ -5,7 +5,7 @@ import { FadeIn } from './animations'
 
 export function About() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section id="about" className="relative py-24 lg:py-32">
       <div className="max-w-4xl mx-auto px-6">
         <FadeIn>
           <p className="label text-center mb-4">About Me</p>

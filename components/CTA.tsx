@@ -7,7 +7,7 @@ import { FadeIn, HoverScale } from './animations'
 
 export function CTA() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section id="contact" className="relative py-24 lg:py-32">
       {/* Background accent */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#0c2340]/20 blur-3xl" />
