@@ -32,6 +32,7 @@ export default function ContactCard() {
                     fill
                     priority
                     className="object-cover"
+                    style={{ borderRadius: '1rem' }}
                     sizes="120px"
                   />
                 </div>
