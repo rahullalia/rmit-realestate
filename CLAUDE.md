@@ -1,5 +1,7 @@
 # CLAUDE.md - Rmit Sharma Real Estate Website
 
+**Last Updated:** 2026-02-03
+
 ## Project Overview
 
 Personal website and digital business card for Rmit Sharma, Real Estate Professional at The Lenard Team. Built for lead generation and professional presence.
@@ -7,6 +9,7 @@ Personal website and digital business card for Rmit Sharma, Real Estate Professi
 **Live URL:** https://rmit.vercel.app
 **Type:** Client website (friend project)
 **Tech Stack:** Next.js 16, Tailwind CSS v4, Framer Motion, TypeScript
+**SOP Reference:** `~/.claude/docs/mortgageLenderWebsiteSOP.md` (adapted for real estate)
 
 ---
 
@@ -15,23 +18,34 @@ Personal website and digital business card for Rmit Sharma, Real Estate Professi
 ```
 rmit/
 ├── app/
-│   ├── page.tsx           # Homepage with Hero, Services, About, CTA
-│   ├── layout.tsx         # Root layout with Inter font
+│   ├── page.tsx           # Homepage (all sections)
+│   ├── layout.tsx         # Root layout with Inter font, SEO, JSON-LD
 │   ├── globals.css        # Brand colors, typography, button styles
 │   ├── rmit/page.tsx      # Digital contact card at /rmit
 │   └── api/vcard/route.ts # VCard download endpoint
 ├── components/
-│   ├── Hero.tsx           # Main hero with photo and CTAs
-│   ├── Services.tsx       # 4 service cards (Buying, Selling, etc.)
+│   ├── Navbar.tsx         # Sticky nav with smooth scroll, mobile menu
+│   ├── ScrollProgress.tsx # Gold progress bar at top
+│   ├── Hero.tsx           # Hero with photo, stats row, CTAs
 │   ├── About.tsx          # About section
+│   ├── Services.tsx       # 4 service cards (Buying, Selling, etc.)
+│   ├── Process.tsx        # 5-step timeline with animated line
+│   ├── Testimonials.tsx   # 3 placeholder reviews with ratings
+│   ├── FAQ.tsx            # 6-item accordion
 │   ├── ServiceAreas.tsx   # Long Island/NYC areas served
 │   ├── CTA.tsx            # Call-to-action section
-│   ├── Footer.tsx         # Footer with contact info
-│   └── animations.tsx     # Framer Motion utilities (FadeIn, Float, etc.)
+│   ├── Footer.tsx         # 3-column footer with quick links
+│   └── animations.tsx     # Framer Motion utilities
 ├── lib/
-│   └── utils.ts           # CONTACT constants, helper functions
+│   └── utils.ts           # CONTACT, STATS, PROCESS_STEPS, FAQ_ITEMS, TESTIMONIALS, NAV_LINKS
 └── public/
     └── rmit.jpg           # Portrait photo (800x1008px)
+```
+
+## Page Section Order
+
+```
+Navbar → ScrollProgress → Hero → About → Services → Process → Testimonials → FAQ → Service Areas → CTA → Footer
 ```
 
 ---
@@ -92,12 +106,41 @@ Located in `lib/utils.ts`:
 - Name: Rmit Sharma
 - Title: Real Estate Professional
 - Team: The Lenard Team
-- Company: eXp Realty
+- Company: Signature Premier Properties
 - Phone, email, Instagram link
+- STATS, PROCESS_STEPS, FAQ_ITEMS, TESTIMONIALS, NAV_LINKS
 
 ---
 
 ## Session Log
+
+### 2026-02-03: Full SOP Alignment
+
+**Reference:** Adapted `~/.claude/docs/mortgageLenderWebsiteSOP.md` for real estate
+
+**New Components Created:**
+- `Navbar.tsx` - Sticky nav with smooth scroll, mobile hamburger menu
+- `ScrollProgress.tsx` - Gold progress bar showing scroll position
+- `Process.tsx` - 5-step timeline with animated connecting line
+- `Testimonials.tsx` - 3 placeholder reviews with star ratings
+- `FAQ.tsx` - 6-item accordion (first open by default)
+
+**Enhanced Existing:**
+- `Hero.tsx` - Added stats row (100+ Families, 5★ Rating, LI & NYC Expert)
+- `Footer.tsx` - 3-column layout with quick links and contact info
+- All sections now have IDs for nav linking (#about, #services, etc.)
+- `utils.ts` - Added STATS, PROCESS_STEPS, FAQ_ITEMS, TESTIMONIALS, NAV_LINKS
+
+**Fixes:**
+- Timeline line centered at 36px (middle of 72px circles)
+- Rounded corners on Image components (both hero and card page)
+
+**Commits:**
+- `b985d34` - Add SOP-aligned sections
+- `29ee794` - Fix timeline alignment and hero image corners
+- `6e9b8ae` - Add rounded corners to card page image
+
+---
 
 ### 2026-01-30: Photo Display Fixes
 
@@ -107,21 +150,13 @@ Located in `lib/utils.ts`:
 3. Button text wrapping - added `whitespace-nowrap`
 4. Card page navigation - replaced back link with "Visit Website" button
 
-**Files Modified:**
-- `components/Hero.tsx` - Photo container, button layout
-- `app/rmit/page.tsx` - Photo container, added Instagram/Website buttons
-- `components/animations.tsx` - Added `target` prop to HoverScale, fixed ease type
-- `public/rmit.jpg` - Cropped to portrait orientation
-
-**Deployed:** https://rmit.vercel.app
-
 ---
 
 ## Potential Enhancements
 
 For future sessions:
-- [ ] Add Testimonials section
-- [ ] Add Stats/Achievements section
+- [ ] Replace placeholder testimonials with real client reviews
+- [ ] Update stats with Rmit's actual numbers
 - [ ] Add Featured Listings carousel
-- [ ] Add Contact form
-- [ ] SEO optimization (meta tags, JSON-LD schema)
+- [ ] Add Contact form (lead capture)
+- [ ] Add mortgage calculator widget (partner with lender?)
